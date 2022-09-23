@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #c6c6c6;
+            min-height: 90vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+
+          :root {
+            --inv-cell-w: 39px;
+          }
+
+        #grid {
+            width: 175px;
+          }
+          
+          .grid-element,
+          .result {
+            background-color: #8b8b8b;
+            border-top: thick double #373737;
+            border-left: thick double #373737;
+            border-right: double #FFFFFF;
+            border-bottom: double #FFFFFF;
+            width: 36px;
+            height: 36px;
+            float: left;
+            overflow: hidden;
+            cursor: pointer;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .items-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+          }
+
+          .items-container .items-element {
+            border: 2px solid black;
+            padding: 5px;
+            max-width: 50px;
+            margin: 0;
+            max-height: 25px;
+            min-height: 25px;
+            max-width: 25px;
+            min-width: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+          } 
+
+            .inventory-img {width: 25px;height: 25px;}
+
+            .img-class {
+                border: 2px solid black;
+                padding: 5px;
+                max-width: 50px;
+                margin: 0;
+                max-height: 25px;
+                min-height: 25px;
+                max-width: 25px;
+                min-width: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+          
+            .equal {
+                margin: 0;
+                }
+
+            .container {display: flex;}
+
+            .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            }
+
+            .equal {font-size: 30px;}
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div id='grid'>
+            <div class='grid-element' data-id="0">
+            </div>
+        
+            <div class='grid-element' data-id="0">
+            </div>
+        
+            <div class='grid-element' data-id="0">
+            </div>
+        
+            <div class='grid-element' data-id="0">
+            </div>
+        
+            <div class='grid-element' data-id="0">
+            </div>
+        
+            <div class='grid-element' data-id="0">
+            </div>
+        
+        
+            <div class='grid-element' data-id="0">
+            </div>
+        
+            <div class='grid-element' data-id="0">
+            </div>
+        
+            <div class='grid-element' data-id="0">
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h1 class="equal">=</h1>
+            <div class="result" data-id="0"></div>
+        </div>
+    </section>
+
+      <div class="items-container">
+      </div>
+
+      <script src="app.js"></script>
+</body>
+</html>
