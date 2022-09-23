@@ -77,23 +77,6 @@ dataCellsAll.forEach(x => {
             img.classList.add("img-class");
             img.dataset.id = x.dataset.id;
             img.src = `static/${x.dataset.id}.png`;
-
-                
-            // img.style = 
-            // `
-            // border: 2px solid black;
-            // padding: 5px;
-            // max-width: 50px;
-            // margin: 0;
-            // max-height: 25px;
-            // min-height: 25px;
-            // max-width: 25px;
-            // min-width: 25px;
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
-            // cursor: pointer;
-            // `
             x.appendChild(img);
         } else alert("select an item before");
     })
