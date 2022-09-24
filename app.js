@@ -1,5 +1,6 @@
 "use strict";
 
+let CRAFTING_TABLE = 4;
 let WOOD_PLANK = 5;
 let STICK = 30;
 let WOOD = 17;
@@ -12,14 +13,15 @@ const dataCellsAll = document.querySelectorAll(".grid-element");
 const invContainerEl = document.querySelector(".items-container");
 const resultEl = document.querySelector(".result");
 
-let currentCraftingTable = [];
+const currentCraftingTable = [];
 const inventory = [WOOD_PLANK, COBBLESTONE, 0, 0, 0, 0, 0].sort(x => x > 0);
 
 const crafting = [
-    [[0, 0, 0, 0, WOOD_PLANK, 0, 0, 0 ,0], WOOD],
+    [[0, 0, 0, 0, WOOD_PLANK, 0, 0, 0 ,0], WOOD],  // TODO multiple wood crafting: [[WOOD_PLANK, 0, 0, 0, 0, 0, 0, 0, 0], WOOD], [[0, WOOD_PLANK, 0, 0, 0, 0, 0, 0, 0], WOOD], [[0, 0, WOOD_PLANK, 0, 0, 0, 0, 0, 0], WOOD],
     [[0, 0, 0, 0, WOOD, 0, 0, WOOD ,0], STICK],
     [[WOOD, WOOD, WOOD, 0, STICK, 0, 0, STICK, 0], WOOD_PICKAXE],
-    [[COBBLESTONE, COBBLESTONE, COBBLESTONE, 0, STICK, 0, 0, STICK, 0], STONE_PICKAXE]
+    [[COBBLESTONE, COBBLESTONE, COBBLESTONE, 0, STICK, 0, 0, STICK, 0], STONE_PICKAXE],
+    [[0, 0, 0, WOOD, WOOD, 0, WOOD, WOOD, 0], CRAFTING_TABLE]
 ];
 
 let selectedItems = 0;
