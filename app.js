@@ -10,7 +10,6 @@ let COBBLESTONE = 6;
 
 const inventoryContailerEl = document.querySelector(".items-container");
 const dataCellsAll = document.querySelectorAll(".grid-element");
-const invContainerEl = document.querySelector(".items-container");
 const resultEl = document.querySelector(".result");
 
 const currentCraftingTable = [];
@@ -27,7 +26,7 @@ const crafting = [
 let selectedItems = 0;
 
 const loadInv = inv => {
-    invContainerEl.innerHTML = ""; // refreshing inv items
+    inventoryContailerEl.innerHTML = ""; // refreshing inv items
 
     inv.forEach(item => {
         const html = item > 0 ? 
@@ -60,8 +59,10 @@ const checkMatch = recipe => {
             resultEl.appendChild(img);
 
             img.addEventListener("click", () => {
-                inventory.push(newCraft);            
-                loadInv(inventory);
+                if (inventory.indexOf(newCraft) === -1) {
+                    inventory.push(newCraft);            
+                    loadInv(inventory);
+                } else alert("You already have this item");
             })
         }
     })
