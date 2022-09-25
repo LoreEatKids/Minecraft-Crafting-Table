@@ -13,7 +13,7 @@ const dataCellsAll = document.querySelectorAll(".grid-element");
 const resultEl = document.querySelector(".result");
 
 const currentCraftingTable = [];
-const inventory = [WOOD_PLANK, COBBLESTONE, 0, 0, 0, 0, 0].sort(x => x > 0);
+const inventory = [0, 0, 0, 0, 0, 0, 0, WOOD_PLANK, COBBLESTONE];
 
 const crafting = [
     [[0, 0, 0, 0, WOOD_PLANK, 0, 0, 0 ,0], WOOD],  // TODO multiple wood crafting: [[WOOD_PLANK, 0, 0, 0, 0, 0, 0, 0, 0], WOOD], [[0, WOOD_PLANK, 0, 0, 0, 0, 0, 0, 0], WOOD], [[0, 0, WOOD_PLANK, 0, 0, 0, 0, 0, 0], WOOD],
