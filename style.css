@@ -92,7 +92,5 @@ body {
 
 @media screen and (-webkit-min-device-pixel-ratio:0)
 and (min-resolution:.001dpcm) {
-  #grid {
-    width: 140px;
-  }
+  #grid {width: 140px;}
 }

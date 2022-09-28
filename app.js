@@ -47,15 +47,20 @@ const updateCrafting = craft => {
     checkMatch(currentCraftingTable);
 }
 
+const createImg = src => {
+    const img = document.createElement("img");
+    img.classList.add("img-class");
+    img.src = `static/${src}.png`;
+    return img;
+}
+
 const checkMatch = recipe => {
     crafting.forEach(craft => {
         if (currentCraftingTable.join() == craft[0]) {
             const newCraft = craft[1];
             resultEl.innerHTML = "";
 
-            const img = document.createElement("img");
-            img.classList.add("img-class");
-            img.src = `static/${newCraft}.png`;
+            const img = createImg(newCraft);
             resultEl.appendChild(img);
 
             img.addEventListener("click", () => {
@@ -76,10 +81,10 @@ dataCellsAll.forEach(x => {
             updateCrafting(document.querySelectorAll('.grid-element'));
                 
             x.innerHTML = "";
-            const img = document.createElement("img");
-            img.classList.add("img-class");
+
+            const img = createImg(x.dataset.id);
             img.dataset.id = x.dataset.id;
-            img.src = `static/${x.dataset.id}.png`;
+
             x.appendChild(img);
         } else alert("select an item before");
     })
