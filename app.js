@@ -90,7 +90,10 @@ class CraftingTable {
   }
 
   handleCellClick(cell) {
-    if (this.selectedItems === 0) return;
+    if (this.selectedItems === 0) {
+        alert("Pick an item before");
+        return;
+    };
 
     cell.dataset.id = this.selectedItems;
 
