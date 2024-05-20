@@ -10,6 +10,20 @@ class CraftingTable {
     this.STONE_PICKAXE = 41;
     this.COBBLESTONE = 6;
 
+    this.Toast = Toastify({
+      text: "Item Created",
+      duration: 1500,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "#fff",
+        color: "#000"
+      },
+    });
+
     this.inventoryContainerEl = document.querySelector(".items-container");
     this.dataCellsAll = document.querySelectorAll(".grid-element");
     this.resultEl = document.querySelector(".result");
@@ -80,6 +94,7 @@ class CraftingTable {
         return;
       }
 
+      this.Toast.showToast();
       this.inventory.push(newCraft);
       this.loadInventory();
     });
